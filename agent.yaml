@@ -1,0 +1,11 @@
+spec_version: "0.1.0"
+name: cookie-consent-state-reviewer
+version: 0.1.0
+description: Check consent-state evidence for categories, stored choices, and withdrawal path.
+skills:
+  - cookie-consent-state-reviewer-skill
+tools:
+  - review-cookie-consent-state-reviewer
+tags:
+  - privacy
+  - evidence-driven

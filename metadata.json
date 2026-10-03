@@ -1,0 +1,24 @@
+{
+  "slug": "cookie-consent-state-reviewer",
+  "title": "Cookie Consent State Reviewer",
+  "category": "privacy",
+  "description": "Check consent-state evidence for categories, stored choices, and withdrawal path.",
+  "fields": {
+    "cookie_categories": {
+      "label": "cookie categories",
+      "kind": "list",
+      "minimum": 1
+    },
+    "stored_choices": {
+      "label": "stored choices",
+      "kind": "object",
+      "minimum": 1
+    },
+    "withdrawal_path": {
+      "label": "withdrawal path",
+      "kind": "text",
+      "minimum": 30
+    }
+  },
+  "limitations": "Uses caller-provided evidence only; cannot confirm external facts. Human review remains required."
+}

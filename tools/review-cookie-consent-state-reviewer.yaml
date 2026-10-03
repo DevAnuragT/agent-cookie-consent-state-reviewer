@@ -1,0 +1,54 @@
+{
+  "name": "review-cookie-consent-state-reviewer",
+  "description": "Run Cookie Consent State Reviewer",
+  "version": "0.1.0",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "payload": {
+        "type": "object",
+        "properties": {
+          "cookie_categories": {
+            "type": "array",
+            "description": "cookie categories"
+          },
+          "stored_choices": {
+            "type": "object",
+            "description": "stored choices"
+          },
+          "withdrawal_path": {
+            "type": "string",
+            "description": "withdrawal path"
+          }
+        },
+        "required": [
+          "cookie_categories",
+          "stored_choices",
+          "withdrawal_path"
+        ]
+      }
+    },
+    "required": [
+      "payload"
+    ]
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      },
+      "score": {
+        "type": "object"
+      },
+      "findings": {
+        "type": "array"
+      }
+    }
+  },
+  "implementation": {
+    "type": "script",
+    "path": "review-cookie-consent-state-reviewer.py",
+    "runtime": "python3"
+  }
+}
